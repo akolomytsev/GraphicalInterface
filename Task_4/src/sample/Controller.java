@@ -13,7 +13,7 @@ public class Controller {
 
 
 
-    public void sendMessag(ActionEvent actionEvent) {
+    public void sendMessage(ActionEvent actionEvent) {
         String message = input.getText();
         listView.getItems().add(message);
         input.clear();

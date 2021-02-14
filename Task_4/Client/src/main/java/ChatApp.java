@@ -13,12 +13,12 @@ public class ChatApp extends Application {
         Network network = Network.getInstance();
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Chat");
-        primaryStage.setScene(new Scene(root, 800, 400));
+        primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();
         primaryStage.setOnCloseRequest(request -> { // это все реакция на кнопку закрыть окно чата
         try {
-            network.writeMessage("/quit"); // команда для выхода из чата
+            network.writeMessage(new QuitRequest()); // команда для выхода из чата
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }

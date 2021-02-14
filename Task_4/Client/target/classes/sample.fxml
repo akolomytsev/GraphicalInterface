@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="BOTTOM_RIGHT" fx:controller="ChatController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.281" xmlns:fx="http://javafx.com/fxml/1">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem onAction="#quit" mnemonicParsing="false" text="Quit"/>
+        </Menu>
+    </MenuBar>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <TextField fx:id="input" onAction="#sendMessage" layoutX="240.0" layoutY="330.0" prefHeight="27.0" prefWidth="320.0"/>
+        <Button onAction="#sendMessage" layoutX="569.0" layoutY="330.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="62.0"
+                text="Button"/>
+        <ListView fx:id="listView" layoutX="240.0" layoutY="6.0" prefHeight="316.0" prefWidth="389.0"/>
+        <ListView fx:id="userList" layoutX="14.0" layoutY="6.0" prefHeight="351.0" prefWidth="212.0"/>
+    </AnchorPane>
+</VBox>
